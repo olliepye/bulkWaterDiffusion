@@ -4,22 +4,6 @@ import os
 import sys
 np.random.seed(int(time.time()))
 
-def direction():
-    n = np.random.uniform()
-    if n < 0.5:
-        return True
-
-def rw1d(Np, Nt):
-    xfinal = np.zeros(Np)
-    for i in range(Np):
-        x = 0
-        for j in range(Nt):
-            if direction():
-                x = x+1
-            else:
-                x = x-1
-        xfinal[i] = x
-
 def step():
     # generate number between -1 and 1 for x,y,z directions
     [x,y,z] = np.random.uniform(low=-1, high = 1, size=3)
